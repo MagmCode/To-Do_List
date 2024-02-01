@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --text: #fcffff;
+    --background: #082538;
+    --primary:#4d82bc;
+    --secondary: #84b6f4;
+    --accent: #ffffff;
+    
+}
+body {
+    background-color: var(--background);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container { 
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/*Perfil*/
+.perfil h1 {
+    color: var(--primary);
+}
+
+.perfil span {
+    color: var(--text);
+    letter-spacing: 1px;
+}
+
+#fecha {
+    color: var(--text);
+    padding: 50px 0 5px 0;
+}
+
+/*Agregar tarea*/
+.agregar_tarea {
+    background-color: var(--primary);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    margin: 30px 0;
+}
+
+.agregar_tarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--accent);
+}
+
+.agregar_tarea i {
+    font-size: 50px;
+    color: var(--accent);
+}
+
+.agregar_tarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregar_tarea input {
+    font-size: 1rem;
+    color: black;
+    padding-left: 10px;
+}
+
+.agregar_tarea input::placeholder {
+    font-size: 1rem;
+    color: rgb(75, 69, 69);
+}
+/*Seleccionar tarea*/
+.seleccionar_tarea h3 {
+
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.seleccionar_tarea li {
+    display: flex;
+    background: linear-gradient(to bottom, var(--background), var(--secondary));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: var(--text);
+}
+
+.seleccionar_tarea i {
+    font-size: 25px;
+}
+
+.seleccionar_tarea i:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.seleccionar_tarea > ul p{ 
+    font-size: 1.2rem;
+}
+
+/*Marca de tachada*/
+.line-through {
+    text-decoration: line-through;
+    color: var(--accent);
+}
+
+/*Notification*/
+.toast {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: var(--secondary);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 5px;
+    animation: slideIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
